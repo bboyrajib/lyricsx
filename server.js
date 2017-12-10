@@ -46,7 +46,7 @@ router.route('/find/:artist/:song')
 		console.log(req.params.song.indexOf('?'));
 		if(req.params.song.indexOf('?')!=-1){
 			console.log("QuestionMark detected");
-			req.params.song.replace(/\?/g,'_');
+			req.params.song=req.params.song.replace(/\?/g,'_');
 		}
 		console.log(req.params.artist + ':' + req.params.song);
 
