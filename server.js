@@ -48,6 +48,18 @@ router.route('/find/:artist/:song')
 			console.log("QuestionMark detected");
 			req.params.song=req.params.song.replace(/\?/g,"%3F");
 		}
+		if(req.params.song.indexOf('\'')!=-1){
+			console.log("apostrophe detected");
+			req.params.song=req.params.song.replace(/\'/g,"%27");
+		}
+		if(req.params.artist.indexOf('\'')!=-1){
+			console.log("apostrophe detected");
+			req.params.artist=req.params.artist.replace(/\'/g,"%27");
+		}
+		if(req.params.artist.indexOf('?')!=-1){
+			console.log("QuestionMark detected");
+			req.params.artist=req.params.artist.replace(/\?/g,"%3F");
+		}
 		console.log(req.params.artist + ':' + req.params.song);
 
 		url = 'http://lyrics.wikia.com/wiki/' + req.params.artist + ':' + req.params.song;
