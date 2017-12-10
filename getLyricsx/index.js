@@ -34,8 +34,7 @@ module.exports = {
 				  "'": '&#x27;',
 				  "'": '&apos;',
 				  '`': '&#x60;',
-				  '' : '\n',
-				  '?': '&quest;'
+				  '' : '\n'
 				};
 
 				var unescapeMap = _.invert(escapeMap);
