@@ -44,8 +44,10 @@ router.route('/find/:artist/:song')
 		var lyrics = "";
 		console.log(req.params.artist + ':' + req.params.song);
 		console.log(req.params.song.indexOf('?'));
-		if(req.params.song.indexOf('?')!=-1)
+		if(req.params.song.indexOf('?')!=-1){
+			console.log("QuestionMark detected");
 			req.params.song.replace('?','_');
+		}
 		console.log(req.params.artist + ':' + req.params.song);
 
 		url = 'http://lyrics.wikia.com/wiki/' + req.params.artist + ':' + req.params.song;
