@@ -7,6 +7,7 @@ module.exports = {
 	get: function(artist, song, callback) {
 
 		var lyrics = "";
+		console.log(artist+" "song);
 
 		url = 'http://lyrics.wikia.com/wiki/' + artist + ':' + song;
 
