@@ -32,7 +32,7 @@ router.use(function(req, res, next) {
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to lyric-api!\nuse /find/artist/song' });   
+    res.json({ message: 'hooray! welcome to lyricsx!\nuse /find/artist/song' });   
 });
 
 // more routes for our API will happen here
@@ -69,7 +69,8 @@ router.route('/find/:artist/:song')
 				  "'": '&#x27;',
 				  "'": '&apos;',
 				  '`': '&#x60;',
-				  '' : '\n'
+				  '' : '\n',
+				  '?': '&quest;'
 				};
 				var unescapeMap = _.invert(escapeMap);
 				var createEscaper = function(map) {

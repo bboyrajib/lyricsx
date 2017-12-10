@@ -1,5 +1,5 @@
 {
-  "name": "lyric-get",
+  "name": "lyricsx",
   "version": "1.0.3",
   "description": "get lyrics by scraping lyrics-wikia. technically illegal to use this.",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/rhnvrm/lyric-api"
+    "url": "github.com/bboyrajib/lyricx"
   },
   "keywords": [
     "lyric",
     "wikia",
     "fetch"
   ],
-  "author": "Rohan Verma",
+  "author": "Rajib Roy",
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.20.0",
