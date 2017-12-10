@@ -8,7 +8,7 @@ module.exports = {
 
 		var lyrics = "";
 
-		url = 'http://lyrics.wikia.com/wiki/' + artist + ':' + song;
+		url = 'http://lyrics.wikia.com/wiki/' + artist.replaceAll("?","%3F") + ':' + song.replaceAll("?","%3F");
 
 
 		request(url, function(error, response, html) {
